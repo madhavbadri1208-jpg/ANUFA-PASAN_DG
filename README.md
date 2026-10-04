@@ -70,8 +70,8 @@ Brain tumor dataset/
 Edit these constants at the top of **A** to match your machine:
 
 ```python
-TRAIN_PATH = "/path/to/Brain tumor dataset/Training/"
-TEST_PATH  = "/path/to/Brain tumor dataset/Test/"
+TRAIN_PATH = "/path/to/Brain tumor dataset/Training/"  (Kaggle training dataset)
+TEST_PATH  = "/path/to/Brain tumor dataset/Test/"      (Mendeley testing dataset)
 SAVE_DIR   = Path("PASAN_DG_RESULTS_stnv")
 DEVICE     = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")   # change the GPU index as needed
 ```
@@ -216,11 +216,8 @@ B and C do not depend on A's results, only on its model definitions, so they can
 - Dataset paths and GPU index are hard-coded and must be edited.
 - Per-image Grad-CAM for the full test set across 6 models × 6 seeds is time- and storage-intensive.
 - Some console messages contain `?` where Unicode symbols were intended; save the files as UTF-8 to avoid this.
-
-## License
-
-Add your license here.
+- Also the code took 4 days to run completely, the implementation environment is specified in the manuscript, if you have other gpus, the time for completion of the code might vary.
 
 ## Citation
 
-Add your citation here.
+Cite the github link and once the manuscript gets accepted the citation link shall be provided.
